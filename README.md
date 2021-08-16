@@ -8,6 +8,8 @@
 New on-line polytope vertex search algorithm optimised for force and velocity polytope evaluation of serial robots.
 
 This repository consists of 
+- [Paper]
+    - final pdf version of the paper
 - [Matlab/octave implementation](#matlab-octave-testing-scripts)
     - full modular algorithm implementation
     - benchmarking comparison of three vertex search algorithms for *FRANKA Emika Panda* and *UR5* robot
