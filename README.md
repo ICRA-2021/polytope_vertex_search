@@ -39,7 +39,7 @@ They are both testing the performance of three vertex search algorithms on *Fran
 > *On-line force capability evaluation based on eﬀicient polytope vertex search <br> by Antun Skuric, Vincent Padois, David Daney*
 ```matlab
 [f_vert, matrix_inverse_count] = polytope_auctus(Jacobian_mat,tau_min,tau_max);
-```git 
+```
 
 > *Evaluation of Force Capabilities for Redundant manipulatiors <br> by
 P.Chiacchio, Pierrot et al.*
