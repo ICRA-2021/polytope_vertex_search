@@ -30,4 +30,4 @@ pages:
       - public
     expire_in: 1 week
   only:
-    -master # this job will affect only the 'master' branch
+    - master # this job will affect only the 'master' branch
