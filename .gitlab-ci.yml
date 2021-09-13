@@ -1,29 +1,33 @@
-image: ruby:2.7
+# requiring the environment of NodeJS 10
+image: node:10
 
-workflow:
-  rules:
-    - if: '$CI_COMMIT_BRANCH'
+# add 'node_modules' to cache for speeding up builds
+cache:
+  paths:
+    - node_modules/ # Node modules and dependencies
 
 before_script:
-  - gem install bundler
-  - bundle install
-
-pages:
-  stage: deploy
-  script:
-    - bundle exec jekyll build -d public
-  artifacts:
-    paths:
-      - public
-  rules:
-    - if: '$CI_COMMIT_BRANCH == "master"'
+  - npm install gitbook-cli -g # install gitbook
+  - gitbook fetch 3.2.3 # fetch final stable version
+  - gitbook install # add any requested plugins in book.json
 
 test:
   stage: test
   script:
-    - bundle exec jekyll build -d test
+    - gitbook build . public # build to public path
+  only:
+    - branches # this job will affect every branch except 'master'
+  except:
+    - master
+    
+# the 'pages' job will deploy and build your site to the 'public' path
+pages:
+  stage: deploy
+  script:
+    - gitbook build . public # build to public path
   artifacts:
     paths:
-      - test
-  rules:
-    - if: '$CI_COMMIT_BRANCH != "master"'
+      - public
+    expire_in: 1 week
+  only:
+    - master # this job will affect only the 'master' branch
