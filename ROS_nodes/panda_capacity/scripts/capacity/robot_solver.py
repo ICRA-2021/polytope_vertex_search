@@ -2,7 +2,7 @@
 import numpy as np
 
 # polytope python module
-import pycapacity.pycapacity as capacity_solver
+import pycapacity.robot as capacity_solver
 
 # URDF parsing an kinematics 
 from urdf_parser_py.urdf import URDF
@@ -81,7 +81,7 @@ class RobotSolver:
         else:
             Jac = np.array(direction).dot(self.jacobian_position(q))
         # use the capacity module
-        return capacity_solver.manipulability_velocity(Jac,self.dq_max)
+        return capacity_solver.velocity_ellipsoid(Jac,self.dq_max)
 
     # force manipulability calculation
     def manipulability_force(self, q, direction = None):
@@ -95,7 +95,7 @@ class RobotSolver:
         else:
             Jac = np.array(direction).dot(self.jacobian_position(q))
         # use the capacity module
-        return capacity_solver.manipulability_force(Jac, self.t_max)
+        return capacity_solver.force_ellipsoid(Jac, self.t_max)
 
     # maximal end effector force
     def force_polytope_intersection(self, q1,q2):

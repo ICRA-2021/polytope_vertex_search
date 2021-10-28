@@ -52,22 +52,32 @@ P.Chiacchio, Pierrot et al.*
 ```
 
 ## Python capacity module
-
-In this directory you can find the generic robot capacity calculation module called `pycapacity` which you can easily integrate in your python project, for example
-```python
-import pycapacity.pycapacity as capacity
+The work described in the paper is fully implemented in python in the frame of the `pycapacity` pip package. This module you can easily integrate in your python project by isntalling it using `pip`
+```shell
+pip install pycapacity
 ```
+The `pycapacity` module implements multiple task-space capacity metrics for robots and human musculoskeletal models. The robot metrics are contained in the `pycapacity.robot` module.
+```python
+import pycapacity.robot as capacity
+```
+
 ### Module functions
-- [`force_polytope`](./pycapacity/docs/pycapacity.md#function-force_polytope): Force polytope representing the capacities of the two robots in a certain configuration
-- [`force_polytope_intersection`](./pycapacity/docs/pycapacity.md#function-force_polytope_intersection): Force polytope representing the intersection of the capacities of the two robots in certain configurations.
-- [`force_polytope_intersection_withfaces`](./pycapacity/docs/pycapacity.md#function-force_polytope_intersection_withfaces): Force polytope representing the intersection of the capacities of the two robots in certain configurations.
-- [`force_polytope_sum_withfaces`](./pycapacity/docs/pycapacity.md#function-force_polytope_sum_withfaces): Force polytope representing the minkowski sum of the capacities of the two robots in certain configurations.
-- [`force_polytope_withfaces`](./pycapacity/docs/pycapacity.md#function-force_polytope_withfaces): Force polytope representing the capacities of the two robots in a certain configuration.
-- [`manipulability_force`](./pycapacity/docs/pycapacity.md#function-manipulability_force): force manipulability calculation
-- [`manipulability_velocity`](./pycapacity/docs/pycapacity.md#function-manipulability_velocity): velocity manipulability calculation
+
+- [`robot.acceleration_ellipsoid`](https://gitlab.inria.fr/auctus-team/people/antunskuric/pycapacity/-/blob/master/docs/robot.md#function-acceleration_ellipsoid): acceleration ellipsoid calculation (dynamic manipulability ellipsoid)
+- [`robot.acceleration_polytope`](https://gitlab.inria.fr/auctus-team/people/antunskuric/pycapacity/-/blob/master/docs/robot.md#function-acceleration_polytope): Acceleration polytope calculating function
+- [`robot.acceleration_polytope_withfaces`](https://gitlab.inria.fr/auctus-team/people/antunskuric/pycapacity/-/blob/master/docs/robot.md#function-acceleration_polytope_withfaces): Acceleration polytope calculating function
+- [`robot.force_ellipsoid`](https://gitlab.inria.fr/auctus-team/people/antunskuric/pycapacity/-/blob/master/docs/robot.md#function-force_ellipsoid): force manipulability ellipsoid calculation
+- [`robot.force_polytope`](https://gitlab.inria.fr/auctus-team/people/antunskuric/pycapacity/-/blob/master/docs/robot.md#function-force_polytope): Force polytope representing the capacities of the two robots in a certain configuration
+- [`robot.force_polytope_intersection`](https://gitlab.inria.fr/auctus-team/people/antunskuric/pycapacity/-/blob/master/docs/robot.md#function-force_polytope_intersection): Force polytope representing the intersection of the capacities of the two robots in certain configurations.
+- [`robot.force_polytope_intersection_withfaces`](https://gitlab.inria.fr/auctus-team/people/antunskuric/pycapacity/-/blob/master/docs/robot.md#function-force_polytope_intersection_withfaces): Force polytope representing the intersection of the capacities of the two robots in certain configurations.
+- [`robot.force_polytope_sum_withfaces`](https://gitlab.inria.fr/auctus-team/people/antunskuric/pycapacity/-/blob/master/docs/robot.md#function-force_polytope_sum_withfaces): Force polytope representing the minkowski sum of the capacities of the two robots in certain configurations.
+- [`robot.force_polytope_withfaces`](https://gitlab.inria.fr/auctus-team/people/antunskuric/pycapacity/-/blob/master/docs/robot.md#function-force_polytope_withfaces): Force polytope representing the capacities of the two robots in a certain configuration.
+- [`robot.velocity_ellipsoid`](https://gitlab.inria.fr/auctus-team/people/antunskuric/pycapacity/-/blob/master/docs/robot.md#function-velocity_ellipsoid): velocity manipulability ellipsoid calculation
+- [`robot.velocity_polytope`](https://gitlab.inria.fr/auctus-team/people/antunskuric/pycapacity/-/blob/master/docs/robot.md#function-velocity_polytope): Velocity polytope calculating function
+- [`robot.velocity_polytope_withfaces`](https://gitlab.inria.fr/auctus-team/people/antunskuric/pycapacity/-/blob/master/docs/robot.md#function-velocity_polytope_withfaces): Velocity polytope calculating function, with faces
 ---
 
-See [`demo_notebook.ipynb`](./pycapacity/demo_notebook.ipynb) for one example use case of the module.
+See [`demo_notebook.ipynb`](https://gitlab.inria.fr/auctus-team/people/antunskuric/pycapacity/-/blob/master/demo_notebook.ipynb) for one example use case of the module.
 
 ## ROS panda capacity package
 In the `ROS_nodes` directory you can find the implementation of the python capacity module for a specific use case of Panda robot. The directory consists of two ros packages:
