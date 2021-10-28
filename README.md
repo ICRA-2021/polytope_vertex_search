@@ -22,6 +22,7 @@ This repository consists of
 <iframe src="https://player.vimeo.com/video/477650685?h=5e5708be9a" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
 <p><a href="https://vimeo.com/477650685">On-line force capability evaluation based on efficient polytope vertex search  (submitted for presentation at ICRA 2021)</a> from <a href="https://vimeo.com/auctusinria">Auctus</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
 
+
 ## Matlab / Octave testing scripts
 
 In the `matlab_octave` directory you can find two testing scripts intended for benchmarking of vertex search algorithms
@@ -38,7 +39,7 @@ They are both testing the performance of three vertex search algorithms on *Fran
 > *On-line force capability evaluation based on eﬀicient polytope vertex search <br> by Antun Skuric, Vincent Padois, David Daney*
 ```matlab
 [f_vert, matrix_inverse_count] = polytope_auctus(Jacobian_mat,tau_min,tau_max);
-```git 
+```
 
 > *Evaluation of Force Capabilities for Redundant manipulatiors <br> by
 P.Chiacchio, Pierrot et al.*
