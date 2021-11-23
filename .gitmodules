@@ -7,3 +7,15 @@
 [submodule "ROS_nodes/hrl-kdl"]
 	path = ROS_nodes/hrl-kdl
 	url = git@gitlab.inria.fr:ros_nodes/hrl-kdl.git
+[submodule "ROS_nodes/panda_capacity"]
+	path = ROS_nodes/panda_capacity
+	url = git@gitlab.inria.fr:auctus-team/people/antunskuric/ros_nodes/panda_capacity.git
+[submodule "ROS/packages/panda_capacity"]
+	path = ROS/packages/panda_capacity
+	url = git@gitlab.inria.fr:auctus-team/people/antunskuric/ros_nodes/panda_capacity.git
+[submodule "ROS/packages/hrl-kdl"]
+	path = ROS/packages/hrl-kdl
+	url = git@gitlab.inria.fr:auctus-team/people/antunskuric/ros_nodes/hrl-kdl.git
+[submodule "ROS/packages/franka_description"]
+	path = ROS/packages/franka_description
+	url = git@gitlab.inria.fr:auctus/panda/torque-qp-extended/franka_description.git

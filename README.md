@@ -17,7 +17,7 @@ This repository consists of
     - force polytope
     - force/velocity manipulability ellipsoid
     - quick demo jupyter script
-- [ROS node for *FRANKA Emika Panda* robot](#ros-panda-capacity-package)
+- [ROS packages and catkin workspace for *FRANKA Emika Panda* robot capacity calculation](#ros-panda-capacity-package)
 
 <iframe src="https://player.vimeo.com/video/477650685?h=5e5708be9a" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
 <p><a href="https://vimeo.com/477650685">On-line force capability evaluation based on efficient polytope vertex search  (submitted for presentation at ICRA 2021)</a> from <a href="https://vimeo.com/auctusinria">Auctus</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
@@ -80,7 +80,7 @@ import pycapacity.robot as capacity
 
 See [`demo_notebook.ipynb`](https://gitlab.inria.fr/auctus-team/people/antunskuric/pycapacity/-/blob/master/demo_notebook.ipynb) for one example use case of the module.
 
-## ROS panda capacity package
+## ROS panda capacity package and catkin
 In the `ROS_nodes` directory you can find the implementation of the python capacity module for a specific use case of Panda robot. The directory consists of two ros packages:
 - hkl-kdl: a fork of  http://wiki.ros.org/hrl-kdl
 - franka_description: Panda robot definitions from Franka Emika  http://wiki.ros.org/franka_description
@@ -92,30 +92,45 @@ To run panda robot capacity calculation nodes first clone the repository and sub
 git clone --recurse-submodules git@gitlab.inria.fr:askuric/polytope_vertex_search.git
 ```
 
+`panda_capacity` package will calculate is an example implementation of the task space capacity calculation for for Franka Emika Panda robot in a form of a catkin ros package.
+
+It uses the library KDL for reading the robot urdf ad it depends on 
+- hrl-kdl package (https://gitlab.inria.fr/auctus-team/people/antunskuric/ros_nodes/hrl-kdl)
+- franka_description package (https://gitlab.inria.fr/auctus/panda/torque-qp-extended/franka_description)
+
+The three packages are shown in the `ROS/packages` folder. And you can find an example catkin workspace in the `ROS/catkin_ws` folder.
+
+#### Create your won catkin workspace
+
 Then create new catkin workspace:
 ```shell
 mkdir ~/capacity_ws && cd ~/capacity_ws/
 mkdir src && cd src
 ```
-Then you can copy the folders from ROS_nodes into the `capacity_ws/src` folder for example:
+Then you can copy the folders from `ROS/packages` into the `capacity_ws/src` folder for example:
 ```shell
-cp -r ~/polytope_vertex_search/ROS_nodes/* .
+cp -r ~/polytope_vertex_search/ROS_packages/* .
 ```
 
 Finally you can build the workspace
 ```shell
 cd ..
-catkin_make
+catkin_make # catkin build
 ```
 And you should be ready to go!
 
 
 
-#### Visualisation dependancies
-For visualizing the polytopes in RVZ you will need to install the [jsk-rviz-plugin](https://github.com/jsk-ros-pkg/jsk_visualization)
+#### Dependancies
+For visualizing the polytopes in RVIZ you will need to install the [jsk-rviz-plugin](https://github.com/jsk-ros-pkg/jsk_visualization)
 
 ```sh
 sudo apt install ros-*-jsk-rviz-plugins # melodic/kinetic... your ros version
+```
+
+And you'll need to install the pip package `pycapacity`
+```
+pip install pycapacity
 ```
 
 ### One panda simulation
