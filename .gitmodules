@@ -1,15 +1,6 @@
-[submodule "ROS/catkin_ws/src/franka_description"]
-	path = ROS_nodes/franka_description
-	url = git@gitlab.inria.fr:auctus/panda/franka_description.git
 [submodule "pycapacity"]
 	path = pycapacity
 	url = git@gitlab.inria.fr:askuric/pycapacity.git
-[submodule "ROS/catkin_ws/src/hrl-kdl"]
-	path = ROS_nodes/hrl-kdl
-	url = git@gitlab.inria.fr:ros_nodes/hrl-kdl.git
-[submodule "ROS/catkin_ws/src/panda_capacity"]
-	path = ROS_nodes/panda_capacity
-	url = git@gitlab.inria.fr:auctus-team/people/antunskuric/ros_nodes/panda_capacity.git
 [submodule "ROS/packages/panda_capacity"]
 	path = ROS/packages/panda_capacity
 	url = git@gitlab.inria.fr:auctus-team/people/antunskuric/ros_nodes/panda_capacity.git
