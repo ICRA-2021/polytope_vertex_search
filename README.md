@@ -17,7 +17,7 @@ This repository consists of
     - force polytope
     - force/velocity manipulability ellipsoid
     - quick demo jupyter script
-- [ROS packages and catkin workspace for *FRANKA Emika Panda* robot capacity calculation](#ros-panda-capacity-package)
+- [ROS packages and catkin workspace for *FRANKA Emika Panda* robot capacity calculation](#ros-panda-capacity-package-and-catkin)
 
 <iframe src="https://player.vimeo.com/video/477650685?h=5e5708be9a" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
 <p><a href="https://vimeo.com/477650685">On-line force capability evaluation based on efficient polytope vertex search  (submitted for presentation at ICRA 2021)</a> from <a href="https://vimeo.com/auctusinria">Auctus</a> on <a href="https://vimeo.com">Vimeo</a>.</p>

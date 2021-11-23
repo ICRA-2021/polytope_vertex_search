@@ -10,3 +10,6 @@
 [submodule "ROS/packages/franka_description"]
 	path = ROS/packages/franka_description
 	url = git@gitlab.inria.fr:auctus/panda/torque-qp-extended/franka_description.git
+[submodule "ROS/catkin_ws/src/panda_capacity"]
+	path = ROS/catkin_ws/src/panda_capacity
+	url = git@gitlab.inria.fr:auctus-team/people/antunskuric/ros_nodes/panda_capacity.git
