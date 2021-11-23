@@ -7,6 +7,3 @@
 [submodule "ROS_nodes/hrl-kdl"]
 	path = ROS_nodes/hrl-kdl
 	url = git@gitlab.inria.fr:ros_nodes/hrl-kdl.git
-[submodule "ROS_nodes/--force"]
-	path = ROS_nodes/--force
-	url = git@gitlab.inria.fr:auctus-team/people/antunskuric/ros_nodes/panda_capacity.git
