@@ -1,7 +1,7 @@
 
 # ROS packages and catkin
 
-`panda_capacity` package will calculate is an example implementation of the task space capacity calculation for for Franka Emika Panda robot in a form of a catkin ros package.
+`panda_capacity` package is an example implementation of the task space capacity calculation for for Franka Emika Panda robot in a form of a catkin ros package.
 
 It uses the library KDL for reading the robot urdf ad it depends on 
 - hrl-kdl package (https://gitlab.inria.fr/auctus-team/people/antunskuric/ros_nodes/hrl-kdl)
@@ -9,16 +9,25 @@ It uses the library KDL for reading the robot urdf ad it depends on
 
 The three packages are shown in the `packages` folder. And you can find an example catkin workspace in the `catkin_ws` forlder.
 
-## Create your won catkin workspace
+## Create your own catkin workspace
 
 Then create new catkin workspace:
 ```shell
 mkdir ~/capacity_ws && cd ~/capacity_ws/
 mkdir src && cd src
 ```
-Then you can copy the folders from `ROS/packages` into the `capacity_ws/src` folder for example:
+
+
+Then you can either copy the folders from `ROS/packages` into the `capacity_ws/src` folder for example:
 ```shell
-cp -r ~/polytope_vertex_search/ROS_packages/* .
+cp -r ~/polytope_vertex_search/ROS/packages/* .
+```
+
+or clone the packages directly
+```shell
+git clone git@gitlab.inria.fr:auctus-team/people/antunskuric/ros_nodes/panda_capacity.git
+git clone git@gitlab.inria.fr:auctus/panda/torque-qp-extended/franka_description.git
+git clone git@gitlab.inria.fr:auctus-team/people/antunskuric/ros_nodes/hrl-kdl.git
 ```
 
 Finally you can build the workspace

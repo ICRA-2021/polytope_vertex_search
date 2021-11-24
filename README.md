@@ -3,7 +3,7 @@
 *by Antun Skuric, Vincent Padois, David Daney*<br>
 *Published at ICRA2021*
 
-<img src="images/rviz_screenshot_2020.png" height="250px">
+<img src="https://gitlab.inria.fr/auctus-team/people/antunskuric/ros_nodes/panda_capacity/-/raw/master/images/rviz_screenshot_2020.png" height="250px">
 
 New on-line polytope vertex search algorithm optimised for force and velocity polytope evaluation of serial robots.
 
@@ -14,7 +14,7 @@ This repository consists of
     - full modular algorithm implementation
     - benchmarking comparison of three vertex search algorithms for *FRANKA Emika Panda* and *UR5* robot
 - [Python module for calculating robot capacity](#python-capacity-module) `pycapacity`
-    - force polytope
+    - force/velocity/acceleration polytope
     - force/velocity manipulability ellipsoid
     - quick demo jupyter script
 - [ROS packages and catkin workspace for *FRANKA Emika Panda* robot capacity calculation](#ros-panda-capacity-package-and-catkin)
@@ -136,7 +136,7 @@ pip install pycapacity
 ### One panda simulation
 Once when you have everything installed you will be able to run the interactive simulations and see the polytope being visualised in real-time.
 
-<img src="images/one_panda.png" height="250px">
+<img src="https://gitlab.inria.fr/auctus-team/people/antunskuric/ros_nodes/panda_capacity/-/raw/master/images/one_panda.png" height="250px">
 
 To see a simulation with one panda robot and its force and velocity manipulatibility ellipsoid and polytope run the command in the terminal.
 
@@ -150,7 +150,7 @@ roslaunch panda_capacity one_panda.launch
 
 To demonstrate the collaborative robotics applications of our algorithm we have provided an interactive simulation of two panda robots where use can visualise their separate and joint force capacities. 
 
-<img src="images/two_panda.png" height="250px">
+<img src="https://gitlab.inria.fr/auctus-team/people/antunskuric/ros_nodes/panda_capacity/-/raw/master/images/two_panda.png" height="250px">
 
 For the interactive simulation of two panda robots with their own capacity measures you can simply run the commands:
 ```shell
@@ -159,7 +159,7 @@ roslaunch panda_capacity two_panda.launch
 ```
 
 #### Minkowski sum of polytopes
-<img src="images/minkowski.png" height="250px">
+<img src="https://gitlab.inria.fr/auctus-team/people/antunskuric/ros_nodes/panda_capacity/-/raw/master/images/minkowski.png" height="250px">
 
 Open a new terminal and run the command:
 ```shell
@@ -167,7 +167,7 @@ rosrun panda_capacity panda_force_polytope_sum.py
 ```
 
 #### Intersection of polytopes
-<img src="images/intersect.png" height="250px">
+<img src="https://gitlab.inria.fr/auctus-team/people/antunskuric/ros_nodes/panda_capacity/-/raw/master/images/intersect.png" height="250px">
 
 Open a new terminal and run the command:
 ```shell
