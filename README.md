@@ -107,9 +107,16 @@ Then create new catkin workspace:
 mkdir ~/capacity_ws && cd ~/capacity_ws/
 mkdir src && cd src
 ```
-Then you can copy the folders from `ROS/packages` into the `capacity_ws/src` folder for example:
+Then you can either copy the folders from `ROS/packages` into the `capacity_ws/src` folder for example:
 ```shell
-cp -r ~/polytope_vertex_search/ROS_packages/* .
+cp -r ~/polytope_vertex_search/ROS/packages/* .
+```
+
+or clone the packages directly
+```shell
+git clone git@gitlab.inria.fr:auctus-team/people/antunskuric/ros_nodes/panda_capacity.git
+git clone git@gitlab.inria.fr:auctus/panda/torque-qp-extended/franka_description.git
+git clone git@gitlab.inria.fr:auctus-team/people/antunskuric/ros_nodes/hrl-kdl.git
 ```
 
 Finally you can build the workspace
