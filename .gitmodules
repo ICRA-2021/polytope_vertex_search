@@ -13,3 +13,6 @@
 [submodule "ROS/catkin_ws/src/panda_capacity"]
 	path = ROS/catkin_ws/src/panda_capacity
 	url = git@gitlab.inria.fr:auctus-team/people/antunskuric/ros_nodes/panda_capacity.git
+[submodule "ROS/panda_capacity_ws"]
+	path = ROS/panda_capacity_ws
+	url = git@gitlab.inria.fr:auctus-team/people/antunskuric/ros/catkin_workspaces/panda_capacity_ws.git

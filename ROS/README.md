@@ -18,7 +18,7 @@ mkdir src && cd src
 ```
 
 
-Then you can either copy the folders from `ROS/packages` into the `capacity_ws/src` folder for example:
+Then you can either copy the folders from `ROS/packages` into the `panda_capacity_ws/src` folder for example:
 ```shell
 cp -r ~/polytope_vertex_search/ROS/packages/* .
 ```

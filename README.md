@@ -126,8 +126,6 @@ catkin_make # catkin build
 ```
 And you should be ready to go!
 
-
-
 #### Dependancies
 For visualizing the polytopes in RVIZ you will need to install the [jsk-rviz-plugin](https://github.com/jsk-ros-pkg/jsk_visualization)
 
